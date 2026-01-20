@@ -210,6 +210,49 @@ button:hover {
     margin-bottom: 8px;
 }
 
+.description-content {
+    line-height: 1.8;
+}
+
+.short-description-section {
+    background: #e8f4f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.short-description-section h3 {
+    margin-top: 0;
+    color: #667eea;
+    font-size: 1.1em;
+}
+
+.short-description {
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.long-description {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.keywords-section {
+    background: #f8f9ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.keywords-section h3 {
+    margin-top: 0;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

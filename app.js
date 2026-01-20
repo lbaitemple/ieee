@@ -34,6 +34,7 @@ function performSearch() {
     const results = POSITIONS_DATA.filter(pos => 
         pos.title.toLowerCase().includes(query) ||
         pos.description.toLowerCase().includes(query) ||
+        (pos.shortDescription && pos.shortDescription.toLowerCase().includes(query)) ||
         pos.keywords.toLowerCase().includes(query)
     );
     
@@ -55,7 +56,7 @@ function displayPositions(positions) {
     positionsList.innerHTML = positions.map((pos, index) => `
         <div class="position-item" onclick="showPositionDetails(${index})">
             <h3>${pos.title}</h3>
-            <p>${pos.description}</p>
+            <p>${pos.shortDescription || pos.description}</p>
         </div>
     `).join('');
 }
@@ -81,10 +82,20 @@ function showPositionDetails(index) {
 
 function formatDescription(position) {
     return `
-        <h3>Position Overview</h3>
-        <p>${position.description}</p>
-        <h3>Key Areas</h3>
-        <p><strong>Keywords:</strong> ${position.keywords}</p>
+        <div class="description-content">
+            ${position.shortDescription ? `
+                <div class="short-description-section">
+                    <h3>Quick Summary</h3>
+                    <p class="short-description">${position.shortDescription}</p>
+                </div>
+            ` : ''}
+            <h3>Full Description</h3>
+            <p class="long-description">${position.description}</p>
+            <div class="keywords-section">
+                <h3>Key Areas</h3>
+                <p><strong>Keywords:</strong> ${position.keywords}</p>
+            </div>
+        </div>
     `;
 }
 
