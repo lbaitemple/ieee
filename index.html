@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE Section Positions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IEEE Section Positions</h1>
+            <p>Search and explore available positions in IEEE sections</p>
+        </header>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search positions (e.g., chair, treasurer, student, awards...)">
+            <button id="searchBtn">Search</button>
+            <button id="showAllBtn">Show All</button>
+        </div>
+
+        <div class="content">
+            <div class="positions-list" id="positionsList">
+                <p class="placeholder">Enter a search term or click "Show All" to see positions</p>
+            </div>
+
+            <div class="position-details" id="positionDetails" style="display: none;">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <h2 id="positionTitle"></h2>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="first30">First 30 Days</button>
+                    <button class="tab-btn" data-tab="keyAdmin">Key Admin Functions</button>
+                    <button class="tab-btn" data-tab="yearly">Yearly Actions</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="tab-description" class="tab-pane active"></div>
+                    <div id="tab-first30" class="tab-pane"></div>
+                    <div id="tab-keyAdmin" class="tab-pane"></div>
+                    <div id="tab-yearly" class="tab-pane"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
