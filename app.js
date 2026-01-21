@@ -489,29 +489,30 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
     ctx.lineTo(1010, 95);
     ctx.stroke();
     
-    // Title
+    // Title - 46pt Helvetica
     ctx.fillStyle = '#1a5490';
-    ctx.font = 'bold 38px Arial';
-    ctx.fillText('Job Description Card', 40, 65);
+    ctx.font = '46px Helvetica, sans-serif';
+    ctx.fillText('Job Description Card', 40, 75);
     
     // Content - all on same lines as in the image
     ctx.fillStyle = '#000000';
-    let y = 145;
-    const lineHeight = 42;
-    const colonSpace = 20; // Space after colon
+    let y = 165;
+    const lineHeight = 50;
+    const colonSpace = 25; // Space after colon
     
     // Volunteer Role: [Role Name]
-    ctx.font = 'bold 22px Arial';
+    // Labels: 30pt Oranda Bold, Body: 30pt Oranda Regular
+    ctx.font = 'bold 30px Oranda, sans-serif';
     ctx.fillText('Volunteer Role:', 40, y);
-    ctx.font = '22px Arial';
+    ctx.font = '30px Oranda, sans-serif';
     const roleX = ctx.measureText('Volunteer Role:').width + 40 + colonSpace;
     ctx.fillText(role, roleX, y);
     y += lineHeight;
     
     // Specific Task: [Task description]
-    ctx.font = 'bold 22px Arial';
+    ctx.font = 'bold 30px Oranda, sans-serif';
     ctx.fillText('Specific Task:', 40, y);
-    ctx.font = '22px Arial';
+    ctx.font = '30px Oranda, sans-serif';
     const taskX = ctx.measureText('Specific Task:').width + 40 + colonSpace;
     const taskText = `Manage ${role.toLowerCase()} responsibilities`;
     const taskLines = wrapText(ctx, taskText, 1000 - taskX);
@@ -523,25 +524,25 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
     y += lineHeight;
     
     // Time Commitment: [X hours/week]
-    ctx.font = 'bold 22px Arial';
+    ctx.font = 'bold 30px Oranda, sans-serif';
     ctx.fillText('Time Commitment:', 40, y);
-    ctx.font = '22px Arial';
+    ctx.font = '30px Oranda, sans-serif';
     const timeX = ctx.measureText('Time Commitment:').width + 40 + colonSpace;
     ctx.fillText(timeCommitment, timeX, y);
     y += lineHeight;
     
     // Duration: Jan 1st - Dec 31st (1 Year Term)
-    ctx.font = 'bold 22px Arial';
+    ctx.font = 'bold 30px Oranda, sans-serif';
     ctx.fillText('Duration:', 40, y);
-    ctx.font = '22px Arial';
+    ctx.font = '30px Oranda, sans-serif';
     const durationX = ctx.measureText('Duration:').width + 40 + colonSpace;
     ctx.fillText('Jan 1st - Dec 31st (1 Year Term)', durationX, y);
     y += lineHeight;
     
     // Deliverables: [Summary]
-    ctx.font = 'bold 22px Arial';
+    ctx.font = 'bold 30px Oranda, sans-serif';
     ctx.fillText('Deliverables:', 40, y);
-    ctx.font = '22px Arial';
+    ctx.font = '30px Oranda, sans-serif';
     const delivX = ctx.measureText('Deliverables:').width + 40 + colonSpace;
     const delivLines = wrapText(ctx, deliverables, 1000 - delivX);
     ctx.fillText(delivLines[0], delivX, y);
@@ -553,11 +554,11 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
     // Convert canvas to image and open in new window
     canvas.toBlob(blob => {
         const url = URL.createObjectURL(blob);
-        const newWindow = window.open('', '_blank', 'width=1070,height=650');
+        const newWindow = window.open('', '_blank', 'width=1100,height=750');
         newWindow.document.write(`
             <html>
             <head>
-                <title>Job Description Card - ${role}</title>
+                <title>Job Description Card - ${role} (3.5" x 2")</title>
                 <style>
                     * {
                         margin: 0;
@@ -573,11 +574,26 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
                         background: #f0f0f0;
                         font-family: Arial, sans-serif;
                     }
-                    img {
-                        max-width: 100%;
-                        height: auto;
-                        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                    .card-info {
+                        background: #1a5490;
+                        color: white;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        margin-bottom: 15px;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    .card-container {
                         background: white;
+                        padding: 10px;
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                    }
+                    img {
+                        display: block;
+                        width: 1050px;
+                        height: 600px;
+                        image-rendering: -webkit-optimize-contrast;
+                        image-rendering: crisp-edges;
                     }
                     .actions {
                         margin-top: 20px;
@@ -607,6 +623,20 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
                     .print-btn:hover {
                         background: #b8895f;
                     }
+                    .print-instructions {
+                        margin-top: 15px;
+                        padding: 15px;
+                        background: #fff3cd;
+                        border: 1px solid #d4a574;
+                        border-radius: 5px;
+                        max-width: 1050px;
+                        text-align: center;
+                    }
+                    .print-instructions p {
+                        margin: 0;
+                        font-size: 14px;
+                        color: #333;
+                    }
                     
                     /* Print styles for business card size */
                     @media print {
@@ -622,6 +652,19 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
                             background: white;
                             overflow: hidden;
                         }
+                        .card-info {
+                            display: none !important;
+                        }
+                        .print-instructions {
+                            display: none !important;
+                        }
+                        .card-container {
+                            box-shadow: none;
+                            padding: 0;
+                            margin: 0;
+                            width: 3.5in;
+                            height: 2in;
+                        }
                         img {
                             width: 3.5in !important;
                             height: 2in !important;
@@ -636,6 +679,7 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
                             page-break-before: avoid;
                             page-break-after: avoid;
                             page-break-inside: avoid;
+                            object-fit: contain;
                         }
                         .actions {
                             display: none !important;
@@ -649,10 +693,16 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
                 </style>
             </head>
             <body>
-                <img src="${url}" alt="Job Description Card">
+                <div class="card-info">Business Card Size: 3.5" × 2" (1050 × 600 pixels at 300 DPI)</div>
+                <div class="card-container">
+                    <img src="${url}" alt="Job Description Card">
+                </div>
                 <div class="actions">
                     <button class="download-btn" onclick="downloadImage()">Download Image</button>
-                    <button class="print-btn" onclick="window.print()">Print</button>
+                    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+                </div>
+                <div class="print-instructions">
+                    <p><strong>To save as PDF:</strong> Click "Print / Save as PDF" → Choose "Save as PDF" as destination → Set paper size to "Custom: 3.5 x 2 inches" → Save</p>
                 </div>
                 <script>
                     function downloadImage() {
@@ -661,6 +711,12 @@ function generateJobCardImage(role, timeCommitment, deliverables) {
                         a.download = 'job-card-${role.replace(/\s+/g, '-').toLowerCase()}.png';
                         a.click();
                     }
+                    
+                    // Adjust print settings before printing
+                    window.onbeforeprint = function() {
+                        document.body.style.margin = '0';
+                        document.body.style.padding = '0';
+                    };
                 </script>
             </body>
             </html>
