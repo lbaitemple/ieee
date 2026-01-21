@@ -1,0 +1,103 @@
+# IEEE Chapter Positions
+# This file contains position descriptions for IEEE Chapters
+
+positions:
+  - title: Chapter Chair
+    shortDescription: The Chapter Chair is responsible for providing programs and activities of interest to its members.
+    description: Your Technical Chapter is a subset of the related IEEE Technical Society. The role of the Chapter Chair is the development, growth, and management of your Chapter under the Technical Society which you represent.
+    keywords: chapter, chair, leadership, technical, society
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Contact your Section Chair
+      - category: Understanding Your Chapter
+        tasks:
+          - Chapter within IEEE Structure
+          - Know your Technical Society
+          - Review Chapter Policy
+    keyAdmin:
+      - category: Manage Chapter Activities
+        tasks:
+          - Plan technical meetings
+          - Coordinate with Technical Society
+          - Manage chapter budget
+      - category: Member Engagement
+        tasks:
+          - Organize technical presentations
+          - Foster member participation
+          - Build relationships with industry
+    yearly:
+      - category: Annual Planning
+        tasks:
+          - Develop annual program calendar
+          - Submit chapter reports
+          - Plan succession
+
+  - title: Chapter Vice Chair
+    shortDescription: Assists the Chapter Chair and assumes responsibilities in their absence.
+    description: The Chapter Vice Chair supports the Chair in managing chapter operations and often succeeds to the Chair position.
+    keywords: vice chair, chapter, assistant, deputy
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Meet with Chapter Chair
+          - Review chapter goals
+    keyAdmin:
+      - category: Support Chapter Chair
+        tasks:
+          - Assist with meeting planning
+          - Help coordinate activities
+          - Engage with members
+    yearly:
+      - category: Prepare for Leadership
+        tasks:
+          - Learn chapter operations
+          - Prepare for Chair role
+
+  - title: Chapter Secretary
+    shortDescription: Maintains chapter records, manages documentation, and handles meeting minutes.
+    description: The Chapter Secretary is responsible for managing and reporting administrative activities of the Chapter.
+    keywords: secretary, records, minutes, documentation, chapter
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review chapter records
+          - Understand reporting requirements
+    keyAdmin:
+      - category: Manage Records
+        tasks:
+          - Maintain meeting minutes
+          - Track member attendance
+          - Submit required reports
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Compile annual report
+          - Archive chapter records
+
+  - title: Chapter Treasurer
+    shortDescription: Manages chapter finances and budget.
+    description: The Chapter Treasurer is the Chief Financial Officer of the Chapter and manages the financial health of the chapter.
+    keywords: treasurer, finance, budget, chapter, money
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review chapter finances
+          - Understand funding sources
+    keyAdmin:
+      - category: Financial Management
+        tasks:
+          - Track chapter expenses
+          - Manage chapter budget
+          - Process reimbursements
+    yearly:
+      - category: Annual Financial Tasks
+        tasks:
+          - Prepare annual budget
+          - Submit financial reports
+          - Balance books for audit

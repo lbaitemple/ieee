@@ -1,0 +1,139 @@
+# IEEE Student Branch Positions
+# This file contains position descriptions for IEEE Student Branches
+
+positions:
+  - title: Student Branch Chair
+    shortDescription: Leads the student branch and coordinates all branch activities.
+    description: A Student Branch gives students the opportunity to meet and learn from fellow students, as well as faculty members and professionals in the field. As the Chairperson of the Student Branch, you are responsible for strengthening the relationship between the university/college administration and the student branch.
+    keywords: student, branch, chair, leadership, university
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Meet with Branch Counselor
+      - category: Understanding Your Branch
+        tasks:
+          - Student Branch within IEEE Structure
+          - Know where to find Student Branch Policy
+          - Review branch history and activities
+      - category: Build Your Team
+        tasks:
+          - Contact branch officers
+          - Meet with Section Student Activities Chair
+          - Connect with other student branches
+    keyAdmin:
+      - category: Manage Branch Activities
+        tasks:
+          - Plan monthly meetings
+          - Organize technical events
+          - Coordinate with university
+      - category: Member Engagement
+        tasks:
+          - Recruit new members
+          - Engage current members
+          - Promote IEEE benefits
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Submit annual report (Due Feb 1)
+          - Plan officer elections
+          - Develop succession plan
+
+  - title: Student Branch Vice Chair
+    shortDescription: Assists the Branch Chair and assumes responsibilities in their absence.
+    description: As Vice Chair your role is to work closely with the Branch Chair to lead the Branch and involve your student members.
+    keywords: student, vice chair, branch, assistant
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Meet with Branch Chair
+          - Review branch goals
+    keyAdmin:
+      - category: Support Branch Chair
+        tasks:
+          - Assist with event planning
+          - Help coordinate meetings
+          - Engage with members
+    yearly:
+      - category: Prepare for Leadership
+        tasks:
+          - Learn branch operations
+          - Prepare for Chair role
+
+  - title: Student Branch Secretary
+    shortDescription: Manages branch records and handles meeting minutes.
+    description: As the Secretary of the Student Branch, you are responsible for managing and reporting administrative activities of your Branch.
+    keywords: student, secretary, records, minutes, branch
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review branch records
+          - Understand reporting requirements
+    keyAdmin:
+      - category: Manage Records
+        tasks:
+          - Maintain meeting minutes
+          - Track member attendance
+          - Submit required reports to Section
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Compile annual report
+          - Archive branch records
+          - Assist with officer transition
+
+  - title: Student Branch Treasurer
+    shortDescription: Manages branch finances and budget.
+    description: As Treasurer of the Student Branch, you will be managing and reporting financial activities. The Student Branch Treasurer is the Chief Financial Officer of the Student Branch.
+    keywords: student, treasurer, finance, budget, branch
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review branch finances
+          - Meet with Section Treasurer
+      - category: Understand Funding
+        tasks:
+          - Learn about funding sources
+          - Understand expense procedures
+          - Review budget guidelines
+    keyAdmin:
+      - category: Financial Management
+        tasks:
+          - Track branch expenses
+          - Manage branch budget
+          - Process reimbursements
+          - Seek funding opportunities
+    yearly:
+      - category: Annual Financial Tasks
+        tasks:
+          - Prepare annual budget
+          - Submit financial reports
+          - Balance books
+
+  - title: Student Branch Counselor
+    shortDescription: Faculty advisor who provides guidance to the student branch.
+    description: The Branch Counselor is a University or College faculty member active in the IEEE, who serves as an adviser to the Student Branch and its Student Officers.
+    keywords: counselor, advisor, faculty, student, branch
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Meet with branch officers
+          - Review branch status
+    keyAdmin:
+      - category: Provide Guidance
+        tasks:
+          - Advise branch officers
+          - Facilitate university relations
+          - Support branch activities
+          - Mentor student leaders
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Review annual report
+          - Support officer elections
+          - Ensure compliance with policies

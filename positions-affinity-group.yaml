@@ -1,0 +1,149 @@
+# IEEE Affinity Group Positions
+# This file contains position descriptions for IEEE Affinity Groups
+
+positions:
+  - title: Women In Engineering (WIE) Affinity Group Chair
+    shortDescription: Leads initiatives to support and promote women in engineering.
+    description: The WIE Affinity Group Chair is the lead volunteer and the public face for the local WIE Affinity Group, promoting and supporting women in engineering.
+    keywords: WIE, women, engineering, diversity, inclusion, affinity
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Contact your Section Officers
+      - category: Understanding WIE
+        tasks:
+          - IEEE Structure & Affinity Groups
+          - MGA Committee Structure & WIE Committee
+          - IEEE WIE Membership & Benefits
+      - category: Build Your Network
+        tasks:
+          - Access IEEE WIE Member Directory
+          - Connect with Regional WIE Coordinator
+          - Join WIE online communities
+    keyAdmin:
+      - category: Organize Activities
+        tasks:
+          - Plan WIE events and programs
+          - Promote STEM education
+          - Support women in engineering careers
+          - Organize networking events
+      - category: Grow Membership
+        tasks:
+          - Recruit new WIE members
+          - Engage current members
+          - Promote WIE benefits
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Submit annual report
+          - Plan WIE recognition awards
+          - Develop succession plan
+
+  - title: Young Professionals (YP) Affinity Group Chair
+    shortDescription: Organizes activities for young professionals in their early careers.
+    description: The YP Affinity Group Chair leads programs and activities for IEEE members in their early professional careers.
+    keywords: YP, young professionals, early career, affinity
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Contact your Section Officers
+      - category: Understanding YP
+        tasks:
+          - IEEE Structure & Affinity Groups
+          - MGA Committee Structure & YP Committee
+          - IEEE YP Membership benefits
+      - category: Build Your Network
+        tasks:
+          - Connect with Regional YP Coordinator
+          - Join YP online communities
+          - Access YP resources
+    keyAdmin:
+      - category: Organize Activities
+        tasks:
+          - Plan professional development events
+          - Organize networking opportunities
+          - Support career advancement
+          - Coordinate with industry partners
+      - category: Engage Members
+        tasks:
+          - Recruit young professionals
+          - Promote YP programs
+          - Foster peer connections
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Submit annual report
+          - Nominate for YP awards
+          - Plan annual calendar
+
+  - title: Life Members (LM) Affinity Group Chair
+    shortDescription: Engages life members and leverages their experience.
+    description: The LM Affinity Group Chair leads activities for IEEE Life Members, engaging their experience and expertise.
+    keywords: life members, LM, senior, experienced, affinity
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Contact your Section Officers
+      - category: Understanding LM
+        tasks:
+          - IEEE Structure & Affinity Groups
+          - IEEE Life Membership & Benefits
+          - LM Committee structure
+    keyAdmin:
+      - category: Organize Activities
+        tasks:
+          - Plan LM events and programs
+          - Create mentorship opportunities
+          - Leverage member expertise
+          - Organize social activities
+      - category: Engage Members
+        tasks:
+          - Connect with life members
+          - Promote LM benefits
+          - Foster knowledge sharing
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Submit annual report
+          - Recognize outstanding LM contributions
+          - Plan succession
+
+  - title: Consultants Network (CN) Affinity Group Chair
+    shortDescription: Supports consultants and independent professionals.
+    description: The CN Affinity Group Chair leads programs for IEEE members who are consultants or independent professionals.
+    keywords: consultants, CN, independent, freelance, affinity
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Review CN resources
+      - category: Understanding CN
+        tasks:
+          - IEEE Consultants Network Overview
+          - CN structure and benefits
+          - Connect with Regional CN Coordinator
+    keyAdmin:
+      - category: Organize Activities
+        tasks:
+          - Plan networking events
+          - Share business development resources
+          - Facilitate peer learning
+          - Organize professional development
+      - category: Support Consultants
+        tasks:
+          - Provide consulting resources
+          - Foster business connections
+          - Share best practices
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Submit annual report
+          - Develop annual program
+          - Plan succession

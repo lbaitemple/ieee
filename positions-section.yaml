@@ -1,0 +1,50 @@
+# IEEE Section Positions
+# This file contains position descriptions for IEEE Sections
+
+positions:
+  - title: Section Chair
+    shortDescription: The Section Chair provides leadership and strategic direction for the section, coordinates activities, and represents the section to IEEE.
+    description: As Section Chair you are the leader and the individual responsible for influencing and motivating your members toward the success of your Section.
+    keywords: chair, leadership, section, executive, management
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+      - category: Understanding the Section
+        tasks:
+          - Section within IEEE MGA Structure
+          - Know where to find Section Policy (MGA Ops Manual Sec 9)
+    keyAdmin:
+      - category: Manage the Section
+        tasks:
+          - Planning & Goal Setting
+          - Section Vitality Checklist
+    yearly:
+      - category: Yearly Planning
+        tasks:
+          - Develop Succession Plan
+          - Review Financial Reports
+
+  - title: Section Treasurer
+    shortDescription: The Treasurer manages section finances, budgets, and financial reporting.
+    description: The Section Treasurer role is much more than distributing checks and paying the bills. The Treasurer is the Chief Financial Officer of the Section.
+    keywords: treasurer, finance, budget, money, financial
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+          - Review Financial Reporting from Last Year
+    keyAdmin:
+      - category: Manage Section Funds
+        tasks:
+          - Important Information for IEEE Treasurer
+          - Learn to complete an Expense Report with receipts
+    yearly:
+      - category: Review Reports
+        tasks:
+          - QUARTERLY - Balance Books for Audit purposes
+          - Review Financial Reports & Budget
+
+# Add more section positions here following the same format

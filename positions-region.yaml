@@ -1,0 +1,112 @@
+# IEEE Region Positions
+# This file contains position descriptions for IEEE Regions
+
+positions:
+  - title: Region Director
+    shortDescription: Provides leadership and strategic direction for the region.
+    description: The Region Director is the chief elected officer of the Region and represents the Region on the IEEE Member and Geographic Activities Board.
+    keywords: region, director, leadership, MGA, board
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review Region Director responsibilities
+          - Meet with outgoing Region Director
+      - category: Understanding the Region
+        tasks:
+          - Region within IEEE MGA Structure
+          - Know where to find Region Policy
+          - Review region strategic plan
+      - category: Build Relationships
+        tasks:
+          - Contact Section Chairs
+          - Meet with Region Committee Chairs
+          - Connect with MGA Board members
+    keyAdmin:
+      - category: Lead the Region
+        tasks:
+          - Chair Region Committee meetings
+          - Represent region at MGA Board
+          - Oversee region operations
+          - Support section development
+      - category: Strategic Planning
+        tasks:
+          - Develop region goals
+          - Monitor region vitality
+          - Foster collaboration among sections
+    yearly:
+      - category: Annual Responsibilities
+        tasks:
+          - Submit annual region report
+          - Conduct region elections
+          - Develop succession plan
+          - Review financial performance
+
+  - title: Region Delegate/Director-Elect
+    shortDescription: Assists the Region Director and prepares to assume the Director role.
+    description: The Region Delegate/Director-Elect supports the Region Director and typically succeeds to the Director position.
+    keywords: region, delegate, director-elect, assistant
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Meet with Region Director
+          - Review region operations
+    keyAdmin:
+      - category: Support Region Director
+        tasks:
+          - Assist with region activities
+          - Represent region as needed
+          - Learn region operations
+    yearly:
+      - category: Prepare for Leadership
+        tasks:
+          - Develop transition plan
+          - Build relationships with sections
+          - Prepare for Director role
+
+  - title: Region Secretary
+    shortDescription: Manages region records and documentation.
+    description: The Region Secretary maintains records of region activities and handles administrative functions.
+    keywords: region, secretary, records, documentation
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review region records
+          - Understand reporting requirements
+    keyAdmin:
+      - category: Manage Records
+        tasks:
+          - Maintain meeting minutes
+          - Track region activities
+          - Submit required reports
+    yearly:
+      - category: Annual Tasks
+        tasks:
+          - Compile annual documentation
+          - Archive region records
+
+  - title: Region Treasurer
+    shortDescription: Manages region finances and budget.
+    description: The Region Treasurer is responsible for the financial management of the region.
+    keywords: region, treasurer, finance, budget
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set up your IEEE Account
+          - Review region finances
+          - Understand funding structure
+    keyAdmin:
+      - category: Financial Management
+        tasks:
+          - Manage region budget
+          - Track expenses
+          - Oversee section rebates
+          - Process financial reports
+    yearly:
+      - category: Annual Financial Tasks
+        tasks:
+          - Prepare annual budget
+          - Submit financial reports
+          - Conduct financial review
