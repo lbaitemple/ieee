@@ -282,6 +282,11 @@ async function handleOrgTypeChange() {
     showAllPositions();
 }
 
+// Auto-load section positions on initial page load
+window.addEventListener('DOMContentLoaded', () => {
+    showAllPositions();
+});
+
 // YAML parsing functions (from yaml-loader.js)
 function parseYAML(yamlText) {
     const positions = [];
