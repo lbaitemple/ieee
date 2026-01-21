@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>IEEE Section Positions</h1>
-            <p>Search and explore available positions in IEEE sections</p>
+            <h1 id="headerTitle">IEEE Section Positions</h1>
+            <p id="headerDescription">Search and explore available positions in IEEE sections</p>
         </header>
 
         <div class="search-section">
@@ -38,7 +38,10 @@
                 <button class="close-btn" id="closeBtn">&times;</button>
                 <div class="position-header">
                     <h2 id="positionTitle"></h2>
-                    <button class="reset-btn" id="resetBtn" title="Clear all checkboxes for this position">Reset Progress</button>
+                    <div class="header-buttons">
+                        <button class="job-card-btn" id="jobCardBtn" title="Generate Job Description Card">Generate Job Card</button>
+                        <button class="reset-btn" id="resetBtn" title="Clear all checkboxes for this position">Reset Progress</button>
+                    </div>
                 </div>
                 
                 <div class="tabs">
@@ -56,6 +59,41 @@
                     <div id="tab-keyAdmin" class="tab-pane"></div>
                     <div id="tab-yearly" class="tab-pane"></div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Description Card Modal -->
+    <div id="jobCardModal" class="modal" style="display: none;">
+        <div class="modal-content job-card">
+            <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+            <h2>Job Description Card</h2>
+            <div class="job-card-content">
+                <h3 id="jobCardTitle"></h3>
+                <div class="job-card-field">
+                    <label>Volunteer Role:</label>
+                    <p id="jobCardRole"></p>
+                </div>
+                <div class="job-card-field">
+                    <label>Specific Task:</label>
+                    <textarea id="jobCardTask" placeholder="Enter specific task description..."></textarea>
+                </div>
+                <div class="job-card-field">
+                    <label>Time Commitment:</label>
+                    <input type="text" id="jobCardTime" placeholder="e.g., 2 hours/week">
+                </div>
+                <div class="job-card-field">
+                    <label>Duration:</label>
+                    <input type="text" id="jobCardDuration" placeholder="e.g., Jan 1st - Dec 31st (1 Year Term)">
+                </div>
+                <div class="job-card-field">
+                    <label>Deliverables:</label>
+                    <textarea id="jobCardDeliverables" placeholder="Enter deliverables..."></textarea>
+                </div>
+            </div>
+            <div class="job-card-actions">
+                <button id="downloadJobCard" class="download-btn">Download as Image</button>
+                <button id="printJobCard" class="print-btn">Print</button>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 positions:
   - title: Section Chair
     shortDescription: The Section Chair provides leadership and strategic direction for the section, coordinates activities, and represents the section to IEEE.
-    description: As Section Chair you are the leader and the individual responsible for influencing and motivating your members toward the success of your Section.
+    description: As Section Chair you are the leader and the individual responsible for influencing and motivating your members toward the success of your Section. Whether you are new to the role or if you have been Section Chair for a while, the Action Plan provides the key tasks to complete in the first 30 days of your term as a Chair, the ongoing tasks, and the tasks to complete each year.
     keywords: chair, leadership, section, executive, management
     first30Days:
       - category: Getting Started
@@ -15,36 +15,166 @@ positions:
         tasks:
           - Section within IEEE MGA Structure
           - Know where to find Section Policy (MGA Ops Manual Sec 9)
+          - Familiarize with the Tools you'll need
+          - Access Tutorials on key Volunteer Tools
+          - IEEE OU Analytics
+          - Access Vitality Resources
+          - TAB Resources for Volunteers
+      - category: Work with your Section Officers
+        tasks:
+          - Contact your Section Officers
+          - Report new Officers using vTools
+          - Create and manage your Section Calendar
+      - category: Complete IEEE Compliance Training within First 60 days
+        tasks:
+          - See who is required to take the compliance training
+          - Access IEEE Compliance Training
+          - Complete & Submit Conflict of Interest (COI) Form
     keyAdmin:
+      - category: Set up Your Executive Committee
+        tasks:
+          - Ensure Officers know their role
+          - Determine which committees your Section needs & Appoint Committee Chairs
+          - Conduct Executive Committee Meetings
       - category: Manage the Section
         tasks:
           - Planning & Goal Setting
           - Section Vitality Checklist
+          - Meeting Agenda Template
+          - Running an Effective Meeting
+          - Familiarize with Roberts Rules
+          - Create and Manage Section Budget
+          - Hold an IEEE EXCOM Meeting at Company
+          - Hold an IEEE ExCom Meeting at Restaurant
+      - category: Section Communications
+        tasks:
+          - Connect with Region Leadership, Students, Society Chapter Chairs and Affinity Groups
+          - IEEE Social Media
+          - Google Groups
+          - Contact members via e-mail using IEEE e-Notice
+      - category: Organize Section Activities
+        tasks:
+          - Student Branches & Section coordination
+          - Hold an IEEE Social Event
+          - Hold an IEEE Full-Day Tech Family Activity
+          - Hold an IEEE Local Tour
+          - Foster Technical Society Chapter collaboration
+          - Build Technical Communities in Chapters
+          - Hold an IEEE Technical Meeting at a Company
+          - Establish Relationships with Industry - Best Practices
+      - category: Engage members & Mentor volunteers
+        tasks:
+          - Engaging IEEE Members
+          - Benefits of Membership
+          - Value of Membership
+      - category: Ensure Elections take place
+        tasks:
+          - Create and Manage Elections in vTools
+          - Election Voting in vTools
+          - Election Calendar Tool
     yearly:
-      - category: Yearly Planning
+      - category: Yearly Planning & Reporting
         tasks:
           - Develop Succession Plan
           - Review Financial Reports
+          - Ensure Required Reporting is submitted (Financial, Meetings, Officers)
 
-  - title: Section Treasurer
+  - title: Vice Chair
+    shortDescription: The Vice Chair assists the Section Chair and assumes responsibilities in their absence.
+    description: The position of Section Vice Chair is important. In many Sections the Vice Chair is elected to succeed the Section Chair. The Vice Chair is also called on to lead the Section when the Chair is absent. As the Vice Chair, you assist the Section Chair in managing the operations of the Section in the best interest of the local members.
+    keywords: vice, chair, assistant, deputy, leadership
+    first30Days:
+      - category: Getting Started
+        tasks:
+          - Set Up your IEEE Account
+          - Read your Job Description
+      - category: Understanding the Section
+        tasks:
+          - Section within IEEE MGA Structure
+          - Know where to find Section Policy (MGA Ops Manual Sec 9)
+          - Ensure transition with prior Vice Chair
+      - category: Familiarize with the Tools you'll need
+        tasks:
+          - Access Tutorials on key Volunteer Tools
+          - IEEE OU Analytics
+          - Access Vitality Resources
+          - TAB Resources for Volunteers
+    keyAdmin:
+      - category: Section Officers Roles
+        tasks:
+          - Ensure Officers know their Role
+      - category: Engage members
+        tasks:
+          - Benefits of Membership
+          - Values of Membership
+          - Connect with Region Leadership, Students, Society chapters Chairs and Affinity Groups
+      - category: Support Chair with Goals setting
+        tasks:
+          - Section Planning & Goal Setting
+          - Section Vitality Checklist
+    yearly:
+      - category: Support chair in conducting Section Activities and Meetings
+        tasks:
+          - Familiarize with Roberts Rules
+          - Running an Effective Meeting
+          - Meeting Agenda Template
+          - Holding an IEEE EXCOM Meeting at a Company
+          - Steps for Holding an IEEE ExCom Meeting at Restaurant
+      - category: Prepare for Chair position (Succession plan)
+        tasks:
+          - Section Chair Action Plan
+
+  - title: Secretary
+    shortDescription: The Secretary maintains section records, manages documentation, and handles meeting minutes.
+    description: The Section Secretary is a steward of the Section's history and future, managing information to enable ExCom decision making. The Secretary role brings members' needs to the Executive Committee and involves having accountability, maintenance and ownership of Section records and correspondence.
+    keywords: secretary, records, minutes, documentation, administrative
+    first30Days:
+      - category: Read your Job Description
+        tasks:
+          - Set up your IEEE Account
+          - Read your Job Description
+      - category: Understanding the Section
+        tasks:
+          - Section within IEEE MGA Structure
+          - Know where to find Section Policy (MGA Ops Manual Sec 9)
+          - Section Vitality Checklist
+          - Ensure transition with prior Secretary
+      - category: Familiarize with the Tools you'll need
+        tasks:
+          - IEEE vTools
+          - IEEE OU Analytics
+          - eNotice
+          - Access Tutorials on key Volunteer Tools
+          - Access Vitality Resources
+    keyAdmin:
+      - category: Manage, Maintain and Distribute Section Documents
+        tasks:
+          - Maintain roster of Sections, Chapters, Affinity Group Volunteers
+          - Maintain Section Minutes and Records
+          - Maintain and/or store non-financial Section documents
+          - Complete and Submit Meeting Reports (L31s)
+      - category: Support Section Meetings
+        tasks:
+          - Distribute Executive Committee meeting notices as appropriate
+          - Steps to Organize successful meetings
+          - Familiarize with Robert Rules
+          - Meeting Agenda Template
+          - Convert an agenda to minutes with minimal work
+          - Meeting Minutes
+    yearly:
+      - category: Yearly Responsibilities
+        tasks:
+          - Participate in annual goal setting for the Section
+          - Participate in succession planning for the Section
+          - Review and update Section governing documents (incl. best practices document, as needed)
+          - Help mentor New Officers (at Section or Chapter level)
+
+  - title: Treasurer
     shortDescription: The Treasurer manages section finances, budgets, and financial reporting.
-    description: The Section Treasurer role is much more than distributing checks and paying the bills. The Treasurer is the Chief Financial Officer of the Section.
-    keywords: treasurer, finance, budget, money, financial
+    description: The Section Treasurer role is much more than distributing checks and paying the bills. The Treasurer is the Chief Financial Officer of the Section. As such, you are expected to proactively manage the financial health of the Section. The Treasurer is an integral part of the Section administration and a key member of the Section Executive Committee.
+    keywords: treasurer, finance, budget, money, financial, accounting
     first30Days:
       - category: Getting Started
         tasks:
           - Set up your IEEE Account
           - Read your Job Description
-          - Review Financial Reporting from Last Year
-    keyAdmin:
-      - category: Manage Section Funds
-        tasks:
-          - Important Information for IEEE Treasurer
-          - Learn to complete an Expense Report with receipts
-    yearly:
-      - category: Review Reports
-        tasks:
-          - QUARTERLY - Balance Books for Audit purposes
-          - Review Financial Reports & Budget
-
-# Add more section positions here following the same format

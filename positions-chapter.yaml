@@ -3,101 +3,182 @@
 
 positions:
   - title: Chapter Chair
-    shortDescription: The Chapter Chair is responsible for providing programs and activities of interest to its members.
-    description: Your Technical Chapter is a subset of the related IEEE Technical Society. The role of the Chapter Chair is the development, growth, and management of your Chapter under the Technical Society which you represent.
-    keywords: chapter, chair, leadership, technical, society
+    shortDescription: The Chapter Chair provides leadership and strategic direction for the chapter, coordinates activities, and represents the chapter to IEEE.
+    description: Your Technical Chapter is a subset of the related IEEE Technical Society. The role of the Chapter Chair is the development, growth, and management of your Chapter under the Technical Society which you represent. As Chair, you play an important administrative role in working with your ExCom to ensure you have a solid technical program for your members.
+    keywords: chapter, chair, leadership, technical, society, management
     first30Days:
       - category: Getting Started
         tasks:
           - Set up your IEEE Account
+          - Review Google Account Options
           - Read your Job Description
-          - Contact your Section Chair
-      - category: Understanding Your Chapter
+      - category: Understanding the Chapter
         tasks:
-          - Chapter within IEEE Structure
-          - Know your Technical Society
-          - Review Chapter Policy
+          - Understand your Chapter within MGA
+          - Review the TAB Introduction to IEEE and Societies
+          - Know where to find Chapter Policy (MGA Ops Manual Sec 9.6)
+      - category: Create an Effective Team
+        tasks:
+          - Meet with your past Chair for any local operating procedures and guidance
+          - Learn about your ExCom and set a schedule for regular meetings
+          - Reach out to your Society Chapter Coordinators
+          - Reach out to your Region Society Coordinator or Liaison
+          - Reach out to your Section or Other Leadership
     keyAdmin:
-      - category: Manage Chapter Activities
+      - category: Familiarize with the Tools you'll need
         tasks:
-          - Plan technical meetings
-          - Coordinate with Technical Society
-          - Manage chapter budget
-      - category: Member Engagement
+          - Know what the tools are and where to get help
+          - Send your first IEEE eNotice
+          - Use IEEE OU Analytics to Find your Members
+      - category: Create and manage your Chapter Calendar and Technical Program
         tasks:
-          - Organize technical presentations
-          - Foster member participation
-          - Build relationships with industry
+          - Learn how to organize a meeting
+          - Use IEEE OU Analytics to Find your Members
+          - Work with your ExCom to plan Chapter Meetings
     yearly:
-      - category: Annual Planning
+      - category: Ensure Continuity of Leadership
         tasks:
-          - Develop annual program calendar
-          - Submit chapter reports
-          - Plan succession
+          - Create a succession plan
+          - Assign or Appoint a Nominations Chair/Committee
+          - Manage and Hold Election in vTools
+      - category: Reporting
+        tasks:
+          - Work with Secretary to Submit Required Officer Reporting in vTools
+          - Work with Secretary and Treasurer to ensure reports are submitted
 
   - title: Chapter Vice Chair
-    shortDescription: Assists the Chapter Chair and assumes responsibilities in their absence.
-    description: The Chapter Vice Chair supports the Chair in managing chapter operations and often succeeds to the Chair position.
-    keywords: vice chair, chapter, assistant, deputy
+    shortDescription: The Vice Chair assists the Chapter Chair and assumes responsibilities in their absence.
+    description: As Vice-Chair, you play an important administrative role in working with your ExCom to ensure you have a solid technical program for your members. You should understand all of the roles of the chapter and be ready to step in for the chair as needed and take on those responsibilities needed or assigned.
+    keywords: vice chair, chapter, assistant, deputy, leadership
     first30Days:
       - category: Getting Started
         tasks:
-          - Set up your IEEE Account
-          - Meet with Chapter Chair
-          - Review chapter goals
+          - Set up Your IEEE Account
+          - Review Google Account Options
+          - Read Your Job Description
+      - category: Understanding the Chapter
+        tasks:
+          - Understand Your Chapter within MGA
+          - Review the TAB Introduction to IEEE and Societies
+          - Know where to find Chapter Policy (MGA Ops Manual Sec 9.6)
+      - category: Be Part of an Effective Team
+        tasks:
+          - Meet with your past Vice-Chair for any local operating procedures and guidance
+          - Learn about your ExCom and work with your Chapter Chair to set a schedule for regular meetings
     keyAdmin:
-      - category: Support Chapter Chair
+      - category: Familiarize with the Tools you'll need
         tasks:
-          - Assist with meeting planning
-          - Help coordinate activities
-          - Engage with members
+          - Know what the tools are and where to get help
+          - Send your first IEEE eNotice
+          - Use IEEE OU Analytics to Find your Members
+      - category: Create and manage your Chapter Calendar and Technical Program
+        tasks:
+          - Learn how to organize a meeting
+          - Use IEEE OU Analytics to Find your Members
+          - Work with your ExCom to plan Chapter Meetings
     yearly:
-      - category: Prepare for Leadership
+      - category: Ensure Continuity of Leadership
         tasks:
-          - Learn chapter operations
-          - Prepare for Chair role
+          - Create a succession plan
+          - Understand the Election Process
+          - Learn how to Manage and Hold Election in vTools
+      - category: Reporting
+        tasks:
+          - Work with Chair and Secretary to Submit Required Officer Reporting in vTools
+          - Work with Chair, Secretary and Treasurer to ensure reports are submitted
 
   - title: Chapter Secretary
-    shortDescription: Maintains chapter records, manages documentation, and handles meeting minutes.
-    description: The Chapter Secretary is responsible for managing and reporting administrative activities of the Chapter.
-    keywords: secretary, records, minutes, documentation, chapter
+    shortDescription: The Secretary maintains chapter records, manages documentation, and handles meeting minutes.
+    description: As secretary, you play an important administrative role in working with your ExCom to ensure you have strong communications and continuity, in the form of reporting, for your members. Your success as Secretary will hinge on learning to work with your Executive Committee.
+    keywords: secretary, records, minutes, documentation, chapter, administrative
     first30Days:
       - category: Getting Started
         tasks:
           - Set up your IEEE Account
-          - Review chapter records
-          - Understand reporting requirements
+          - Review Google Account options
+          - Read your Job Description
+      - category: Understanding the Chapter
+        tasks:
+          - Understand your Chapter within MGA
+          - Review the TAB Introduction to IEEE and Societies
+          - Know where to find Chapter Policy (MGA Ops Manual Sec 9.6)
+      - category: Be Part of an Effective Team
+        tasks:
+          - Meet with your past Secretary for any local operating procedures and guidance
+          - Learn about your ExCom and set a schedule for regular meetings
     keyAdmin:
-      - category: Manage Records
+      - category: Familiarize with the Tools you'll need
         tasks:
-          - Maintain meeting minutes
-          - Track member attendance
-          - Submit required reports
+          - Know what the tools are and where to get help
+          - Create and report your first Meeting in vTools Events
+          - Send your first IEEE eNotice
+          - Use IEEE OU Analytics to Find your Members
+      - category: Help Create and manage your Chapter Calendar and Technical Program
+        tasks:
+          - Learn how to organize a meeting
+          - Create an agenda and convert to minutes with minimal work
+          - Work with your ExCom to plan Chapter Meetings
+          - Complete and submit Meeting Reports (L31)
     yearly:
-      - category: Annual Tasks
+      - category: Ensure Continuity of Leadership
         tasks:
-          - Compile annual report
-          - Archive chapter records
+          - Mentor New Officers and Create a Succession Plan
+          - Understand the Election Process
+          - Review and update Chapter Governing Documents
+      - category: Reporting
+        tasks:
+          - Submit Required Officer Reporting in vTools
+          - Ensure reports are submitted
 
   - title: Chapter Treasurer
-    shortDescription: Manages chapter finances and budget.
-    description: The Chapter Treasurer is the Chief Financial Officer of the Chapter and manages the financial health of the chapter.
-    keywords: treasurer, finance, budget, chapter, money
+    shortDescription: The Treasurer manages chapter finances, budgets, and financial reporting.
+    description: As Treasurer, you play an important administrative role in working with your ExCom to ensure strong financial management and continuity for your chapter. Your success as Treasurer will hinge on learning to work with your Executive Committee and understanding IEEE financial policies.
+    keywords: treasurer, finance, budget, chapter, money, financial, accounting
     first30Days:
       - category: Getting Started
         tasks:
-          - Set up your IEEE Account
-          - Review chapter finances
-          - Understand funding sources
+          - Set up your IEEE Account for Access to NextGen Finances and vTools
+          - Review Google Account options
+          - Read your Job Description
+          - Meet with your past Treasurer for any local operating procedures and guidance
+      - category: Understanding the Chapter
+        tasks:
+          - Understand your Chapter within MGA
+          - Review the TAB Introduction to IEEE and Societies
+          - Know where to find Chapter Policy (MGA Ops Manual Sec 9.6)
+          - Understand IEEE Financial Policies
+      - category: Be Part of an Effective Team
+        tasks:
+          - Learn about your ExCom and set a schedule for regular meetings
     keyAdmin:
-      - category: Financial Management
+      - category: Complete Required Compliance and COI Training
         tasks:
-          - Track chapter expenses
-          - Manage chapter budget
-          - Process reimbursements
+          - Complete Required Compliance Training
+          - Complete and Submit Conflict of Interest Forms
+      - category: Familiarize with the Tools you'll need
+        tasks:
+          - Know what the tools are and where to get help (vTools Events, E-Notice, Events, Volunteer Platform)
+          - Review Concentration Banking Information
+          - Use IEEE OU Analytics to Find your Members
+      - category: Manage Chapter Funds
+        tasks:
+          - Identify Cost Accounts for each Expense Type - IEEE Chart of Accounts
+          - Learn to complete an Expense Report with receipts
+          - Create a Budget and Identify Funding Sources (e.g., Rebate, Events, etc.)
+          - Reach out to your Section Treasurer with your yearly budget and plans (coordination)
+          - Learn to Report monetary prizes using 1099 Forms (as needed)
     yearly:
-      - category: Annual Financial Tasks
+      - category: Ensure Continuity of Leadership
         tasks:
-          - Prepare annual budget
-          - Submit financial reports
-          - Balance books for audit
+          - Mentor New Officers and Create a Succession Plan
+          - Understand the Election Process
+          - Review and update Chapter Governing Documents
+      - category: Reporting
+        tasks:
+          - Understand Record Retention Schedule
+          - Review Financial Report from Prior year
+          - Change account access -- remove prior treasurer, add new treasurer
+          - Transfer/collect all checks, past documentation, and outstanding invoices
+          - Review deadlines and bonuses
+          - Complete MGA Financial Reporting
+          - Complete any Required Society Reporting

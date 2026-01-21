@@ -6,17 +6,20 @@ const positionDetails = document.getElementById('positionDetails');
 const positionTitle = document.getElementById('positionTitle');
 const closeBtn = document.getElementById('closeBtn');
 const resetBtn = document.getElementById('resetBtn');
+const jobCardBtn = document.getElementById('jobCardBtn');
 const orgTypeSelect = document.getElementById('orgType');
 
 let currentPositions = [];
 let currentPositionTitle = '';
 let currentOrgType = 'section';
+let currentPosition = null;
 
 // Event listeners
 searchBtn.addEventListener('click', performSearch);
 showAllBtn.addEventListener('click', showAllPositions);
 closeBtn.addEventListener('click', closeDetails);
 resetBtn.addEventListener('click', resetProgress);
+jobCardBtn.addEventListener('click', openJobCardModal);
 orgTypeSelect.addEventListener('change', handleOrgTypeChange);
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') performSearch();
@@ -37,7 +40,8 @@ function performSearch() {
         return;
     }
 
-    const results = POSITIONS_DATA.filter(pos => 
+    const dataSource = window.POSITIONS_DATA || POSITIONS_DATA;
+    const results = dataSource.filter(pos => 
         pos.title.toLowerCase().includes(query) ||
         pos.description.toLowerCase().includes(query) ||
         (pos.shortDescription && pos.shortDescription.toLowerCase().includes(query)) ||
@@ -48,7 +52,7 @@ function performSearch() {
 }
 
 function showAllPositions() {
-    displayPositions(POSITIONS_DATA);
+    displayPositions(window.POSITIONS_DATA || POSITIONS_DATA);
 }
 
 function displayPositions(positions) {
@@ -71,6 +75,7 @@ function showPositionDetails(index) {
     const position = currentPositions[index];
     if (!position) return;
 
+    currentPosition = position;
     currentPositionTitle = position.title;
     positionTitle.textContent = position.title;
     
@@ -244,6 +249,27 @@ async function handleOrgTypeChange() {
     const orgType = orgTypeSelect.value;
     currentOrgType = orgType;
     
+    // Update header based on organization type
+    const headerTitles = {
+        'section': 'IEEE Section Positions',
+        'chapter': 'IEEE Chapter Positions',
+        'region': 'IEEE Region Positions',
+        'student-branch': 'IEEE Student Branch Positions',
+        'affinity-group': 'IEEE Affinity Group Positions'
+    };
+    
+    const headerDescriptions = {
+        'section': 'Search and explore available positions in IEEE sections',
+        'chapter': 'Search and explore available positions in IEEE chapters',
+        'region': 'Search and explore available positions in IEEE regions',
+        'student-branch': 'Search and explore available positions in IEEE student branches',
+        'affinity-group': 'Search and explore available positions in IEEE affinity groups'
+    };
+    
+    document.getElementById('headerTitle').textContent = headerTitles[orgType];
+    document.getElementById('headerDescription').textContent = headerDescriptions[orgType];
+    document.title = headerTitles[orgType];
+    
     // Close any open position details
     closeDetails();
     
@@ -266,13 +292,16 @@ async function handleOrgTypeChange() {
         const response = await fetch(yamlFile);
         if (response.ok) {
             const yamlText = await response.text();
+            console.log(`Fetched ${yamlFile}, parsing...`);
             const yamlData = parseYAML(yamlText);
+            console.log(`Parsed YAML data:`, yamlData);
             window.POSITIONS_DATA = convertToHTML(yamlData);
             console.log(`Loaded ${window.POSITIONS_DATA.length} positions from ${yamlFile}`);
         } else {
-            throw new Error('YAML file not found');
+            throw new Error(`YAML file not found: ${response.status}`);
         }
     } catch (error) {
+        console.error(`Error loading ${yamlFile}:`, error);
         console.log(`Could not load ${yamlFile}, using default data.js`);
         // Fallback: Filter data.js by org type if available
         // For now, just show all positions
@@ -342,6 +371,10 @@ function parseYAML(yamlText) {
             };
             currentPosition[currentSection].push(currentCategory);
         }
+        else if (currentCategory && trimmed === 'tasks:') {
+            // Skip the tasks: line, we're already in a category
+            continue;
+        }
         else if (currentCategory && trimmed.startsWith('- ') && !trimmed.startsWith('- category:')) {
             currentCategory.tasks.push(trimmed.substring(2).trim());
         }
@@ -382,4 +415,283 @@ function convertToHTML(yamlData) {
             yearly: convertSection(position.yearly)
         };
     });
+}
+
+
+// Job Description Card Functions
+function openJobCardModal() {
+    if (!currentPosition) return;
+    
+    // Calculate time based on First 30 Days tasks (15 minutes each)
+    const first30DaysContent = currentPosition.first30Days;
+    let taskCount = 0;
+    
+    // Count tasks from the HTML content
+    if (first30DaysContent && first30DaysContent !== 'Information not available for this section.') {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = first30DaysContent;
+        taskCount = tempDiv.querySelectorAll('li').length;
+    }
+    
+    const totalMinutes = taskCount * 15;
+    const weeklyMinutes = Math.round(totalMinutes / 4); // Divide by 4 for weekly estimate
+    const hours = Math.floor(weeklyMinutes / 60);
+    const minutes = weeklyMinutes % 60;
+    const timeCommitment = hours > 0 
+        ? `${hours} hour${hours > 1 ? 's' : ''}${minutes > 0 ? ` ${minutes} min` : ''} / week`
+        : `${minutes} min / week`;
+    
+    // Extract deliverables from yearly actions
+    const yearlyContent = currentPosition.yearly;
+    let deliverables = 'Complete assigned responsibilities';
+    
+    if (yearlyContent && yearlyContent !== 'Information not available for this section.') {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = yearlyContent;
+        const tasks = Array.from(tempDiv.querySelectorAll('li'));
+        if (tasks.length > 0) {
+            // Get first 2-3 tasks as summary
+            deliverables = tasks.slice(0, 3).map(li => li.textContent.trim()).join('. ');
+            if (deliverables.length > 150) {
+                deliverables = deliverables.substring(0, 150) + '...';
+            }
+        }
+    }
+    
+    // Generate the job card image
+    generateJobCardImage(currentPosition.title, timeCommitment, deliverables);
+}
+
+function generateJobCardImage(role, timeCommitment, deliverables) {
+    // Create a canvas to draw the card - business card size (3.5" x 2" at 300 DPI)
+    const canvas = document.createElement('canvas');
+    canvas.width = 1050;  // 3.5 inches * 300 DPI
+    canvas.height = 600;  // 2 inches * 300 DPI
+    const ctx = canvas.getContext('2d');
+    
+    // Background with slight gradient
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    gradient.addColorStop(0, '#ffffff');
+    gradient.addColorStop(1, '#f8f8f8');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Border
+    ctx.strokeStyle = '#d4a574';
+    ctx.lineWidth = 4;
+    ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+    
+    // Straight horizontal accent line across the whole card
+    ctx.strokeStyle = '#d4a574';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(40, 95);
+    ctx.lineTo(1010, 95);
+    ctx.stroke();
+    
+    // Title
+    ctx.fillStyle = '#1a5490';
+    ctx.font = 'bold 38px Arial';
+    ctx.fillText('Job Description Card', 40, 65);
+    
+    // Content - all on same lines as in the image
+    ctx.fillStyle = '#000000';
+    let y = 145;
+    const lineHeight = 42;
+    const colonSpace = 20; // Space after colon
+    
+    // Volunteer Role: [Role Name]
+    ctx.font = 'bold 22px Arial';
+    ctx.fillText('Volunteer Role:', 40, y);
+    ctx.font = '22px Arial';
+    const roleX = ctx.measureText('Volunteer Role:').width + 40 + colonSpace;
+    ctx.fillText(role, roleX, y);
+    y += lineHeight;
+    
+    // Specific Task: [Task description]
+    ctx.font = 'bold 22px Arial';
+    ctx.fillText('Specific Task:', 40, y);
+    ctx.font = '22px Arial';
+    const taskX = ctx.measureText('Specific Task:').width + 40 + colonSpace;
+    const taskText = `Manage ${role.toLowerCase()} responsibilities`;
+    const taskLines = wrapText(ctx, taskText, 1000 - taskX);
+    ctx.fillText(taskLines[0], taskX, y);
+    if (taskLines.length > 1) {
+        y += lineHeight;
+        ctx.fillText(taskLines[1], 40, y);
+    }
+    y += lineHeight;
+    
+    // Time Commitment: [X hours/week]
+    ctx.font = 'bold 22px Arial';
+    ctx.fillText('Time Commitment:', 40, y);
+    ctx.font = '22px Arial';
+    const timeX = ctx.measureText('Time Commitment:').width + 40 + colonSpace;
+    ctx.fillText(timeCommitment, timeX, y);
+    y += lineHeight;
+    
+    // Duration: Jan 1st - Dec 31st (1 Year Term)
+    ctx.font = 'bold 22px Arial';
+    ctx.fillText('Duration:', 40, y);
+    ctx.font = '22px Arial';
+    const durationX = ctx.measureText('Duration:').width + 40 + colonSpace;
+    ctx.fillText('Jan 1st - Dec 31st (1 Year Term)', durationX, y);
+    y += lineHeight;
+    
+    // Deliverables: [Summary]
+    ctx.font = 'bold 22px Arial';
+    ctx.fillText('Deliverables:', 40, y);
+    ctx.font = '22px Arial';
+    const delivX = ctx.measureText('Deliverables:').width + 40 + colonSpace;
+    const delivLines = wrapText(ctx, deliverables, 1000 - delivX);
+    ctx.fillText(delivLines[0], delivX, y);
+    for (let i = 1; i < delivLines.length && i < 2; i++) {
+        y += lineHeight;
+        ctx.fillText(delivLines[i], 40, y);
+    }
+    
+    // Convert canvas to image and open in new window
+    canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const newWindow = window.open('', '_blank', 'width=1070,height=650');
+        newWindow.document.write(`
+            <html>
+            <head>
+                <title>Job Description Card - ${role}</title>
+                <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    body {
+                        margin: 0;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background: #f0f0f0;
+                        font-family: Arial, sans-serif;
+                    }
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                        background: white;
+                    }
+                    .actions {
+                        margin-top: 20px;
+                        display: flex;
+                        gap: 10px;
+                    }
+                    button {
+                        padding: 12px 24px;
+                        font-size: 16px;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-weight: bold;
+                        transition: all 0.3s;
+                    }
+                    .download-btn {
+                        background: #1a5490;
+                        color: white;
+                    }
+                    .download-btn:hover {
+                        background: #0d3a6b;
+                    }
+                    .print-btn {
+                        background: #d4a574;
+                        color: white;
+                    }
+                    .print-btn:hover {
+                        background: #b8895f;
+                    }
+                    
+                    /* Print styles for business card size */
+                    @media print {
+                        * {
+                            margin: 0 !important;
+                            padding: 0 !important;
+                        }
+                        html, body {
+                            width: 3.5in;
+                            height: 2in;
+                            margin: 0;
+                            padding: 0;
+                            background: white;
+                            overflow: hidden;
+                        }
+                        img {
+                            width: 3.5in !important;
+                            height: 2in !important;
+                            max-width: 3.5in !important;
+                            max-height: 2in !important;
+                            min-width: 3.5in !important;
+                            min-height: 2in !important;
+                            box-shadow: none;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            page-break-before: avoid;
+                            page-break-after: avoid;
+                            page-break-inside: avoid;
+                        }
+                        .actions {
+                            display: none !important;
+                        }
+                        @page {
+                            size: 3.5in 2in;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <img src="${url}" alt="Job Description Card">
+                <div class="actions">
+                    <button class="download-btn" onclick="downloadImage()">Download Image</button>
+                    <button class="print-btn" onclick="window.print()">Print</button>
+                </div>
+                <script>
+                    function downloadImage() {
+                        const a = document.createElement('a');
+                        a.href = '${url}';
+                        a.download = 'job-card-${role.replace(/\s+/g, '-').toLowerCase()}.png';
+                        a.click();
+                    }
+                </script>
+            </body>
+            </html>
+        `);
+        newWindow.document.close();
+    });
+}
+
+function closeJobCardModal() {
+    jobCardModal.style.display = 'none';
+}
+
+function wrapText(ctx, text, maxWidth) {
+    const words = text.split(' ');
+    const lines = [];
+    let currentLine = '';
+    
+    words.forEach(word => {
+        const testLine = currentLine + (currentLine ? ' ' : '') + word;
+        const metrics = ctx.measureText(testLine);
+        if (metrics.width > maxWidth && currentLine) {
+            lines.push(currentLine);
+            currentLine = word;
+        } else {
+            currentLine = testLine;
+        }
+    });
+    
+    if (currentLine) {
+        lines.push(currentLine);
+    }
+    
+    return lines;
 }
